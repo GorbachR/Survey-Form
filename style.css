@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+html {
+    font-size: 1.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Open Sans", Roboto,
+      "Helvetica Neue", Arial, sans-serif;
+  }
+
+h1 {
+
+}
+
+body {
+    background-image: url(img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+    background-attachment: fixed;
+    background-color: #0008;
+    line-height: 1.6em;
+}
+
+.main-wrapper {
+    margin-top: 2em;
+
+}
+
+
+.header-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-weight: 550;
+
+}
+
+#title {
+
+}
+
+#description {
+    margin-top: 0.5em;
+    max-width: 65ch;
+}
+
+#survey-form {
+    margin-bottom: 2em;
+}
+
+.survey-form-container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+    margin-top: 2em;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+
+.survey-form__gender-container {
+    display: flex;
+    align-items: center;
+}
+
+.survey-form__measures-wrapper {
+    display: flex;
+    align-items: center;
+    
+}
+
+
+
+.survey-form-container input, select, textarea {
+    border-radius: 10px;
+    margin-bottom: 1.5em;
+    max-width: 100%;
+    color: #292f33;
+    font-size: 1rem;
+}
+
+.survey-form-container label {
+    margin-bottom: 0.3em;
+    margin-right:  0.8em;
+    color: #292f33;
+}
+
+.survey-form-container input[type="radio"], input[type="checkbox"] {
+    height: 0.9em;
+    width: 0.9em;
+    
+    
+}
+
+@media (max-width: 640px) {
+    html {
+        font-size: 1.3rem;
+      }
+      .header-wrapper {
+          width: 80%;
+      }
+      .survey-form-container {
+          width: 80%;
+      }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+    html {
+      font-size: 1.3rem;
+    }
+    .header-wrapper {
+        width: 70%;
+    }
+    .survey-form-container {
+        width: 70%;
+    }
+  }
+  
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    html {
+      font-size: 1.5rem;
+    }
+    .header-wrapper {
+        width: 60%;
+    }
+    .survey-form-container {
+        width: 60%;
+    }
+  }
+
+  
+  @media (min-width: 1280px) {
+    html {
+      font-size: 2rem;
+    }
+  }

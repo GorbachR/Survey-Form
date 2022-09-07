@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Raphael Gorbach" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Survey Form</title>
+  </head>
+
+  <body>
+    <div class="main-wrapper">
+      <header class="header-wrapper">
+        <h1 id="title">Teeth health survey for Dingle Co. employees</h1>
+        <p id="description">
+          We aim to collect data on the tooth health of our employees in
+          coorperation with the local research facility of the university. This
+          survey solely aims to collect data for the year of 2021, keep this in
+          mind when answering the questions. Thank you for participating in this
+          survey!
+        </p>
+      </header>
+      <form id="survey-form" action="post">
+        <div class="survey-form-container">
+          <label for="name" id="name-label">Full Name:</label>
+          <input id="name" type="text" placeholder="Enter your Name" required />
+
+          <label for="email" id="email-label">Email:</label>
+          <input
+            id="email"
+            type="email"
+            placeholder="Enter your Email"
+            required
+          />
+
+          <label for="number" id="number-label">Age:</label>
+          <input
+            id="number"
+            type="number"
+            min="1"
+            max="100"
+            placeholder="Enter your age"
+          />
+
+          <label>Gender:</label>
+          <div class="survey-form__gender-container">
+            <label for="radio-gender--M">
+              <input
+                id="radio-gender--M"
+                name="radio-gender"
+                type="radio"
+                value="M"
+              />
+              Male
+            </label>
+
+            <label for="radio-gender--F">
+              <input
+                id="radio-gender--F"
+                name="radio-gender"
+                type="radio"
+                value="F"
+              />
+              Female
+            </label>
+          </div>
+
+          <label for="dropdown"
+            >How many times a day do you brush your teeth?</label
+          >
+          <select id="dropdown">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4+">4+</option>
+          </select>
+
+          <label for="survey-form__measures-wrapper"
+            >What other measures do you use to care for you teeth?</label
+          >
+          <div class="survey-form__measures-wrapper">
+            <label for="checkbox-toothcare--Doctor-Visit">
+              <input
+                id="checkbox-toothcare--Doctor-Visit"
+                name="checkbox-toothcare"
+                type="checkbox"
+                value="DoctorVisit"
+              />
+              Visit the dentist once a year
+            </label>
+
+            <label for="checkbox-toothcare--Floss">
+              <input
+                id="checkbox-toothcare--Floss"
+                name="checkbox-toothcare"
+                type="checkbox"
+                value="Floss"
+              />
+              Floss
+            </label>
+          </div>
+
+          <label for="form__textarea"
+            >Did you have any complication with your teeth in 2021? (If the
+            answer is no leave the Textbox empty)</label
+          >
+          <textarea id="form__textarea" name="" cols="30" rows="10"></textarea>
+
+          <input id="submit" type="submit" value="Send" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
