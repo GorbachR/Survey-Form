@@ -1,17 +1,8 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
   }
-
-html {
-    font-size: 1.5rem;
-    font-family: -apple-system, BlinkMacSystemFont, "Open Sans", Roboto,
-      "Helvetica Neue", Arial, sans-serif;
-  }
-
-h1 {
-
-}
 
 body {
     background-image: url(img/background.jpg);
@@ -20,127 +11,121 @@ body {
     background-blend-mode: darken;
     background-attachment: fixed;
     background-color: #0008;
-    line-height: 1.6em;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: #292f33;
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, Roboto,
+    "Helvetica Neue", Arial, sans-serif;
 }
 
 .main-wrapper {
-    margin-top: 2em;
-
+    margin: 2rem 0;
+    padding: 0 1rem;
 }
-
 
 .header-wrapper {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    justify-items: center;
+    max-width: 30rem;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 2rem;
     color: white;
+}
+
+.title {
+    margin-bottom: 0.5rem;
+    line-height: 2.5rem;
     font-weight: 550;
-
 }
 
-#title {
-
-}
-
-#description {
-    margin-top: 0.5em;
-    max-width: 65ch;
-}
-
-#survey-form {
-    margin-bottom: 2em;
-}
-
-.survey-form-container {
+.survey-form {
     display: flex;
-    flex-wrap: nowrap;
     flex-direction: column;
-    width: 50%;
+    width: fit-content;
+    max-width: 30rem;
     margin-left: auto;
     margin-right: auto;
-    padding: 1em;
-    margin-top: 2em;
-    border-radius: 5px;
+    padding: 1rem;
+    border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.7);
 }
 
-
-.survey-form__gender-container {
-    display: flex;
-    align-items: center;
+.form-item {
+    margin-bottom: 1rem;
+    width: 100%;
 }
 
-.survey-form__measures-wrapper {
-    display: flex;
-    align-items: center;
-    
+.form-item > p, label {
+    display: block;
 }
 
-
-
-.survey-form-container input, select, textarea {
+.form-item input, select, textarea {
     border-radius: 10px;
-    margin-bottom: 1.5em;
-    max-width: 100%;
+    border: 1px solid #292f33;
+    width: 100%;
+    padding: 0.25rem;
+    font-size: inherit;
+    font-family: inherit;
     color: #292f33;
-    font-size: 1rem;
+    resize: none;
 }
 
-.survey-form-container label {
-    margin-bottom: 0.3em;
-    margin-right:  0.8em;
-    color: #292f33;
+.form-item input[type="radio"] {
+    position: relative;
+    display: inline-block;
+    outline: none;
 }
 
-.survey-form-container input[type="radio"], input[type="checkbox"] {
-    height: 0.9em;
-    width: 0.9em;
-    
-    
+.form-item input[type="radio"]:before  {
+    position: absolute;
+    content: "";
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50%;
 }
 
-@media (max-width: 640px) {
-    html {
-        font-size: 1.3rem;
-      }
-      .header-wrapper {
-          width: 80%;
-      }
-      .survey-form-container {
-          width: 80%;
-      }
+.form-item input[type="radio"]:focus-visible:before {
+    outline-style: auto;
 }
 
-@media (min-width: 640px) and (max-width: 1023px) {
-    html {
-      font-size: 1.3rem;
-    }
-    .header-wrapper {
-        width: 70%;
-    }
-    .survey-form-container {
-        width: 70%;
+@supports not selector(:focus-visible) {
+    .form-item input[type="radio"]:focus:before {
+        outline-style: auto;
     }
   }
-  
-  @media (min-width: 1024px) and (max-width: 1279px) {
-    html {
+
+.form-item input[type="checkbox"]:focus {
+    outline-offset: 0;
+}
+
+.form-item input[type="radio"], input[type="checkbox"] {
+    height: 0.9rem;
+    width: 0.9rem;
+    accent-color: rgb(12 74 110);
+}
+
+.item-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.submit-wrapper {
+    margin-bottom: 0.5rem;
+}
+
+.submit-button {
+    transition: background-color 0.5s ease;
+    background-color: rgb(243 244 246);
+}
+
+.submit-button:hover {
+    transition: background-color 0.5s ease;
+    background-color: rgb(229 231 235);
+    cursor:pointer;
+}
+
+@media (min-width: 1024px) {
+   html {
       font-size: 1.5rem;
-    }
-    .header-wrapper {
-        width: 60%;
-    }
-    .survey-form-container {
-        width: 60%;
-    }
-  }
-
-  
-  @media (min-width: 1280px) {
-    html {
-      font-size: 2rem;
-    }
-  }
+       line-height: 2rem;
+   }
+}
